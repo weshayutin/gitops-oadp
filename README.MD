@@ -1,3 +1,5 @@
+# Install the OpenShift gitops operator
+ah, you know how :)
 
 # Get the argocli
 https://argo-cd.readthedocs.io/en/stable/cli_installation/
