@@ -9,7 +9,7 @@ metadata:
   name: minimal-8csivol
   namespace: minimal-8csivol
 spec:
-  replicas: j
+  replicas: 1
   selector:
     matchLabels:
       app: minimal-8csivol
