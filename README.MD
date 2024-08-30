@@ -90,3 +90,48 @@ velero backup create 8csi-argo-fs-restic-1 --include-namespaces minimal-8csivol 
 
 * success - [backup details](known_errors/fs-backup-restic)
 
+## How to configure Argo to work with OADP
+
+Argo has to be configured to not manage PVC and PV's if OADP is backing up or restoring to the namespace.
+
+* inspect the argocd configuration
+```
+oc get argocd openshift-gitops -n openshift-gitops -o yaml
+```
+
+* edit the config to add the resourceExclusions if needed.
+
+The default config as of OpenShift 4.16 has the following:
+```
+  resourceExclusions: |
+    - apiGroups:
+      - tekton.dev
+      clusters:
+      - '*'
+      kinds:
+      - TaskRun
+      - PipelineRun
+```
+
+* update the resource exclusions to include PV's and PVC's.
+```
+  resourceExclusions: |
+    - apiGroups:
+      - tekton.dev
+      clusters:
+      - '*'
+      kinds:
+      - TaskRun
+      - PipelineRun
+    - apiGroups:
+      clusters:
+      - '*'
+      kinds:
+      - PersistentVolumeClaim
+      - PersistentVolumes
+      - VolumeSnapshots
+      - VolumeSnapshotsContents
+```
+
+
+
