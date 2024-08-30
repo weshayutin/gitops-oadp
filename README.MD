@@ -144,3 +144,15 @@ openshift-gitops/minimal-8csivol  https://kubernetes.default.svc  minimal-8csivo
 ```
 
 
+## Additional changes to the app:
+git [update the deployment change](https://github.com/weshayutin/gitops-oadp/commit/25199529bcc6537e95a6d9729bdf223d0b226772971e71e1b899351c2b6478abd)
+
+![update deployment in git pic](images/gitops_change.png)
+
+
+```
+argocd app list --grpc-web
+NAME                              CLUSTER                         NAMESPACE        PROJECT  STATUS     HEALTH   SYNCPOLICY  CONDITIONS                  REPO                                           PATH  TARGET
+openshift-gitops/minimal-8csivol  https://kubernetes.default.svc  minimal-8csivol  default  OutOfSync  Healthy  Auto-Prune  ExcludedResourceWarning(8)  https://github.com/weshayutin/gitops-oadp.git  app   main
+
+```
