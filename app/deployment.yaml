@@ -9,7 +9,7 @@ metadata:
   name: minimal-8csivol
   namespace: minimal-8csivol
 spec:
-  replicas: 1
+  replicas: j
   selector:
     matchLabels:
       app: minimal-8csivol
@@ -23,7 +23,7 @@ spec:
         resources:
           requests:
             cpu: 100m
-            memory: 100Mi
+            memory: 101Mi
           limits:
             cpu: 100m
             memory: 100Mi

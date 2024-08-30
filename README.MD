@@ -133,5 +133,14 @@ The default config as of OpenShift 4.16 has the following:
       - VolumeSnapshotsContents
 ```
 
+* Once Argo has been updated the minimal-8csivol namespace can be backed up, deleted and restored.  The label `argocd.argoproj.io/managed-by: openshift-gitops` will
+also be restored via OADP and your application will be running, with data and hooked back into Argo Gitops :)
+
+```
+argocd app list
+NAME                              CLUSTER                         NAMESPACE        PROJECT  STATUS     HEALTH   SYNCPOLICY  CONDITIONS                                             REPO                                           PATH  TARGET
+openshift-gitops/minimal-8csivol  https://kubernetes.default.svc  minimal-8csivol  default  OutOfSync  Healthy  Auto-Prune  ExcludedResourceWarning(8),RepeatedResourceWarning(9)  https://github.com/weshayutin/gitops-oadp.git  app   main
+
+```
 
 
