@@ -59,8 +59,14 @@ Argo and OADP need to be configured properly when they are used together in the 
 
 * A CSI DataMover backup will fail with volumesnapshots not found
 
-  * Backup
+  * DataMover Backup
 ```
 velero backup create 8csi-argo1 --include-namespaces minimal-8csivol --snapshot-move-data=true
 ```
   * Failure - [volumesnapshots not found](known_errors/volumesnapshot_not_found.txt)
+
+  * CSI Backup
+```
+velero backup create 8csi-argo-csi-1 --include-namespaces minimal-8csivol
+```
+  * Failures - [volumesnapshots not found](known_errors/csi-backup-volumesnapshot.txt)
