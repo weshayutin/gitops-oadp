@@ -57,7 +57,7 @@ oc label ns minimal-8csivol "argocd.argoproj.io/managed-by=openshift-gitops"
 
 Argo and OADP need to be configured properly when they are used together in the same cluster and namespace.  Both Argo and OADP assume to have full control over creating and deleting objects and resources in the namespace.
 
-* A CSI DataMover backup will fail with volumesnapshots not found
+#### A CSI DataMover backup will fail with volumesnapshots not found
 
   * DataMover Backup
 ```
@@ -65,7 +65,7 @@ velero backup create 8csi-argo1 --include-namespaces minimal-8csivol --snapshot-
 ```
   * Failure - [volumesnapshots not found](known_errors/volumesnapshot_not_found.txt)
 
-  * CSI Backup
+#### CSI Backup
 ```
 velero backup create 8csi-argo-csi-1 --include-namespaces minimal-8csivol
 ```
