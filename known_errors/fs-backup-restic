@@ -1,0 +1,204 @@
+Name:         [1m8csi-argo-fs-restic-1[22m
+Namespace:    openshift-adp
+Labels:       velero.io/storage-location=dpa-sample-1
+Annotations:  velero.io/resource-timeout=10m0s
+              velero.io/source-cluster-k8s-gitversion=v1.29.6+aba1e8d
+              velero.io/source-cluster-k8s-major-version=1
+              velero.io/source-cluster-k8s-minor-version=29
+
+Phase:  [32mCompleted[0m
+
+
+Namespaces:
+  Included:  minimal-8csivol
+  Excluded:  <none>
+
+Resources:
+  Included:        *
+  Excluded:        <none>
+  Cluster-scoped:  auto
+
+Label selector:  <none>
+
+Or label selector:  <none>
+
+Storage Location:  dpa-sample-1
+
+Velero-Native Snapshot PVs:  auto
+Snapshot Move Data:          false
+Data Mover:                  velero
+
+TTL:  720h0m0s
+
+CSISnapshotTimeout:    10m0s
+ItemOperationTimeout:  4h0m0s
+
+Hooks:  <none>
+
+Backup Format Version:  1.1.0
+
+Started:    2024-08-30 20:43:56 +0000 UTC
+Completed:  2024-08-30 20:44:38 +0000 UTC
+
+Expiration:  2024-09-29 20:43:56 +0000 UTC
+
+Total items to be backed up:  128
+Items backed up:              128
+
+Resource List:
+  apiextensions.k8s.io/v1/CustomResourceDefinition:
+    - clusterserviceversions.operators.coreos.com
+  apps/v1/Deployment:
+    - minimal-8csivol/minimal-8csivol
+  apps/v1/ReplicaSet:
+    - minimal-8csivol/minimal-8csivol-6df77f8976
+  authorization.openshift.io/v1/Role:
+    - minimal-8csivol/openshift-gitops-argocd-application-controller
+    - minimal-8csivol/openshift-gitops-argocd-server
+  authorization.openshift.io/v1/RoleBinding:
+    - minimal-8csivol/openshift-gitops-argocd-application-controller
+    - minimal-8csivol/openshift-gitops-argocd-server
+    - minimal-8csivol/system:deployers
+    - minimal-8csivol/system:image-builders
+    - minimal-8csivol/system:image-pullers
+  operators.coreos.com/v1alpha1/ClusterServiceVersion:
+    - minimal-8csivol/openshift-gitops-operator.v1.13.1
+  rbac.authorization.k8s.io/v1/Role:
+    - minimal-8csivol/openshift-gitops-argocd-application-controller
+    - minimal-8csivol/openshift-gitops-argocd-server
+  rbac.authorization.k8s.io/v1/RoleBinding:
+    - minimal-8csivol/openshift-gitops-argocd-application-controller
+    - minimal-8csivol/openshift-gitops-argocd-server
+    - minimal-8csivol/system:deployers
+    - minimal-8csivol/system:image-builders
+    - minimal-8csivol/system:image-pullers
+  v1/ConfigMap:
+    - minimal-8csivol/kube-root-ca.crt
+    - minimal-8csivol/openshift-service-ca.crt
+  v1/Event:
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f099fdcaec6366
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f099fecf97eac0
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f099fecf98e216
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f099fecf9b0cb8
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f099fed19d6c00
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f099fed28e018a
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f099fed3c3d434
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f099ff89a1f082
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f099ff8d77a418
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f09a002246170f
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f09a0023e96e61
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f09a0050b4f71a
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f09a00700a053a
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n.17f09a007132f783
+    - minimal-8csivol/minimal-8csivol-6df77f8976.17f099fc9a9d1046
+    - minimal-8csivol/minimal-8csivol.17f099fc984cd160
+    - minimal-8csivol/velero-volume1-9f8k4.17f09bbdfedb7eff
+    - minimal-8csivol/velero-volume1-9f8k4.17f09bbe18286194
+    - minimal-8csivol/velero-volume1-9f8k4.17f09bbe5cbf2f63
+    - minimal-8csivol/velero-volume1-cl6rq.17f09a3aa08221b1
+    - minimal-8csivol/velero-volume1-cl6rq.17f09a3ab7cd54e2
+    - minimal-8csivol/velero-volume2-5cvrk.17f09bbf2b759e78
+    - minimal-8csivol/velero-volume2-5cvrk.17f09bbf498d21c4
+    - minimal-8csivol/velero-volume2-5cvrk.17f09bbfa169f6c5
+    - minimal-8csivol/velero-volume2-j9rd6.17f09a3c043e0127
+    - minimal-8csivol/velero-volume2-j9rd6.17f09a3c8727a1b8
+    - minimal-8csivol/velero-volume3-vh54m.17f09a3d226b915c
+    - minimal-8csivol/velero-volume3-vh54m.17f09a3d5dcfd63d
+    - minimal-8csivol/velero-volume3-z5mwm.17f09bc05845bba8
+    - minimal-8csivol/velero-volume3-z5mwm.17f09bc06df9b866
+    - minimal-8csivol/velero-volume3-z5mwm.17f09bc0b681d861
+    - minimal-8csivol/velero-volume4-gvhqb.17f09bc184e9421c
+    - minimal-8csivol/velero-volume4-gvhqb.17f09bc19a6c4c58
+    - minimal-8csivol/velero-volume4-z68k6.17f09a3e4c669d0d
+    - minimal-8csivol/velero-volume4-z68k6.17f09a3e9f95a94a
+    - minimal-8csivol/velero-volume5-5tl4h.17f09a3f76639ec6
+    - minimal-8csivol/velero-volume5-5tl4h.17f09a3fc9994870
+    - minimal-8csivol/velero-volume5-st9n8.17f09bc2b1af3667
+    - minimal-8csivol/velero-volume5-st9n8.17f09bc2d00f55c4
+    - minimal-8csivol/velero-volume5-st9n8.17f09bc327cb9174
+    - minimal-8csivol/velero-volume6-ntc2h.17f09a40c440663b
+    - minimal-8csivol/velero-volume6-ntc2h.17f09a410b84767b
+    - minimal-8csivol/velero-volume6-zcdvg.17f09bc3dec63996
+    - minimal-8csivol/velero-volume6-zcdvg.17f09bc3fd4787ab
+    - minimal-8csivol/velero-volume7-qbj5n.17f09a41e26bca1f
+    - minimal-8csivol/velero-volume7-qbj5n.17f09a424d569d2e
+    - minimal-8csivol/velero-volume7-rctzl.17f09bc50b69e7c7
+    - minimal-8csivol/velero-volume7-rctzl.17f09bc52a44d9d1
+    - minimal-8csivol/velero-volume8-5kln7.17f09a4324303e9f
+    - minimal-8csivol/velero-volume8-5kln7.17f09a43775f2b0b
+    - minimal-8csivol/velero-volume8-8bl9x.17f09bc637f010c1
+    - minimal-8csivol/velero-volume8-8bl9x.17f09bc65a1c87d6
+    - minimal-8csivol/volume1.17f099ec31fd7d81
+    - minimal-8csivol/volume1.17f099fc9bcdb414
+    - minimal-8csivol/volume1.17f099fc9bf7614c
+    - minimal-8csivol/volume1.17f099fd9facbf48
+    - minimal-8csivol/volume2.17f099ec31f19d79
+    - minimal-8csivol/volume2.17f099fc9c85605b
+    - minimal-8csivol/volume2.17f099fc9c95dd10
+    - minimal-8csivol/volume2.17f099fd9fc352ce
+    - minimal-8csivol/volume3.17f099ec31fa6a37
+    - minimal-8csivol/volume3.17f099fc9d3c6956
+    - minimal-8csivol/volume3.17f099fc9d675e36
+    - minimal-8csivol/volume3.17f099fd9fca0974
+    - minimal-8csivol/volume4.17f099ec31f6bd67
+    - minimal-8csivol/volume4.17f099fc9d8a2276
+    - minimal-8csivol/volume4.17f099fc9d8eb664
+    - minimal-8csivol/volume4.17f099fd9fc40346
+    - minimal-8csivol/volume5.17f099ec31fbbdd2
+    - minimal-8csivol/volume5.17f099fc9e1b475e
+    - minimal-8csivol/volume5.17f099fc9e2f85e2
+    - minimal-8csivol/volume5.17f099fd9ff2da4b
+    - minimal-8csivol/volume6.17f099ec31fb7cd3
+    - minimal-8csivol/volume6.17f099fc9e9b03de
+    - minimal-8csivol/volume6.17f099fc9ead49c7
+    - minimal-8csivol/volume6.17f099fd9fc4fd3c
+    - minimal-8csivol/volume7.17f099ec31fcb028
+    - minimal-8csivol/volume7.17f099fc9f4e3819
+    - minimal-8csivol/volume7.17f099fc9f5959a7
+    - minimal-8csivol/volume7.17f099fd9fc59c87
+    - minimal-8csivol/volume8.17f099ec31f96770
+    - minimal-8csivol/volume8.17f099fc9fb29da6
+    - minimal-8csivol/volume8.17f099fc9fbdf242
+    - minimal-8csivol/volume8.17f099fd9ff63c86
+  v1/Namespace:
+    - minimal-8csivol
+  v1/PersistentVolume:
+    - pvc-7288627e-faac-452a-9997-9218a5e177ab
+    - pvc-794c8f8c-20c1-4b12-868a-c5904d9b4213
+    - pvc-92ddb1cf-90ee-4bc0-bb92-d32b8459ffc0
+    - pvc-a55c06c3-92d4-4fff-8213-84e1a827a004
+    - pvc-ae4c113e-8cb0-4271-bcf1-814ba24293ee
+    - pvc-bffe580d-b17f-48d4-978f-c08d35a940ec
+    - pvc-df18ae00-9125-4768-8959-9facdabe12a9
+    - pvc-f325e653-1094-4195-9d7c-a46e896038ac
+  v1/PersistentVolumeClaim:
+    - minimal-8csivol/volume1
+    - minimal-8csivol/volume2
+    - minimal-8csivol/volume3
+    - minimal-8csivol/volume4
+    - minimal-8csivol/volume5
+    - minimal-8csivol/volume6
+    - minimal-8csivol/volume7
+    - minimal-8csivol/volume8
+  v1/Pod:
+    - minimal-8csivol/minimal-8csivol-6df77f8976-qc62n
+  v1/Secret:
+    - minimal-8csivol/builder-dockercfg-596rb
+    - minimal-8csivol/default-dockercfg-v5mcw
+    - minimal-8csivol/deployer-dockercfg-jbv24
+  v1/ServiceAccount:
+    - minimal-8csivol/builder
+    - minimal-8csivol/default
+    - minimal-8csivol/deployer
+
+Backup Volumes:
+  Velero-Native Snapshots: <none included>
+
+  CSI Snapshots: <none included>
+
+  Pod Volume Backups - restic:
+    Completed:
+      minimal-8csivol/minimal-8csivol-6df77f8976-qc62n: volume1, volume2, volume3, volume4, volume5, volume6, volume7, volume8
+
+HooksAttempted:  0
+HooksFailed:     0

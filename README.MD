@@ -70,3 +70,23 @@ velero backup create 8csi-argo1 --include-namespaces minimal-8csivol --snapshot-
 velero backup create 8csi-argo-csi-1 --include-namespaces minimal-8csivol
 ```
   * Failures - [volumesnapshots not found](known_errors/csi-backup-volumesnapshot.txt)
+
+#### FSBackup - kopia ( no errors )
+```
+velero backup create 8csi-argo-fs-kopia-1 --include-namespaces minimal-8csivol  --default-volumes-to-fs-backup=true
+```
+  * success - [backup details](known_errors/fs_backup_kopia)
+
+#### FSBackup - restic
+```
+  configuration:
+    nodeAgent:
+      enable: true
+      uploaderType: restic
+```
+```
+velero backup create 8csi-argo-fs-restic-1 --include-namespaces minimal-8csivol  --default-volumes-to-fs-backup=true
+```
+
+* success - [backup details](known_errors/fs-backup-restic)
+
