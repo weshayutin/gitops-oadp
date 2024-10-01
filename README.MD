@@ -24,7 +24,7 @@ ARGO_SERVER=`oc get route -n openshift-gitops -o jsonpath='{range .items[1]}{.sp
 ```
 * check this by running
 ```
-argo context
+argocd context
 ```
 
 ### Basic Docs
